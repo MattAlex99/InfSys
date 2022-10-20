@@ -1,0 +1,6 @@
+[0m[[0m[0mdebug[0m] [0m[0mAcquiring lock on file /home/alexander/IdeaProjects/infsys_praktikum1/project/target/.sbt-compilation-infos/root-compile/.sbt-idea-lock ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/alexander/IdeaProjects/infsys_praktikum1/src/main/scala/Main.scala:40:5: A try without a catch or finally is equivalent to putting its body in a block; no exceptions are handled.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    try {[0m
+[0m[[0m[33mwarn[0m] [0m[0m    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0mdebug[0m] [0m[0mReleasing lock on file /home/alexander/IdeaProjects/infsys_praktikum1/project/target/.sbt-compilation-infos/root-compile/.sbt-idea-lock.[0m
