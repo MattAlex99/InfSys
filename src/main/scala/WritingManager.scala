@@ -16,7 +16,6 @@ class WritingManager {
     val is = new FileInputStream(path)
 
     try {
-      //Vars nur für Lastentest
 
       val gson = new Gson
       val scanner = new Scanner(is, StandardCharsets.UTF_8.name())
@@ -34,8 +33,11 @@ class WritingManager {
                     //writing starts here
 
                     insertIntoArticle(currentArticle)
-                    currentArticle.authors.forEach(author => insertIntoAuthor(author)) //insert into authors
-                    currentArticle.authors.forEach(author => insertIntoArticleAuthor(currentArticle.id, author.id)) //insert into articleauthor
+                    if (!(currentArticle.authors == null)){
+                      //bei etwa eintrag 4.000.000 gibt es einen Artike ohne Author
+                      currentArticle.authors.forEach(author => insertIntoAuthor(author)) //insert into authors
+                      currentArticle.authors.forEach(author => insertIntoArticleAuthor(currentArticle.id, author.id)) //insert into articleauthor
+                    }
 
                     if (!(currentArticle.references == null)){
                       currentArticle.references.foreach(ref => insertIntoReference(currentArticle.id, ref))
@@ -72,11 +74,6 @@ class WritingManager {
     insertIntoArticleStatement.setString(10,line.issue)
     insertIntoArticleStatement.setString(11,line.doi)
 
-    try {
-      insertIntoArticleStatement.execute()
-    } catch {
-      case e: java.sql.SQLException => print(e)
-    }
   }
 
   val insertIntoAuthorPrepared="insert into author values(?,?,?)"
@@ -85,11 +82,7 @@ class WritingManager {
     insertIntoAuthorStatement.setLong(1,author.id)
     insertIntoAuthorStatement.setString(2,author.name)
     insertIntoAuthorStatement.setString(3,author.org)
-    try {
-      insertIntoAuthorStatement.execute()
-    } catch {
-      case e: java.sql.SQLException =>
-    }
+
   }
 
 
@@ -99,10 +92,8 @@ class WritingManager {
     insertIntoArticleAuthorStatement.setLong(1,articleId)
     insertIntoArticleAuthorStatement.setLong(2,authorId)
     insertIntoArticleAuthorStatement.execute()
-    try {
-    } catch {
-      case e: java.sql.SQLException => print (e)
-    }
+
+
   }
 
   val insertIntoRecerence = "insert into reference values(?,?)"
@@ -111,11 +102,7 @@ class WritingManager {
   def insertIntoReference(referencingArticleId:Long, referencedArticleId:Long): Unit = {
     insertIntoReferenceStatement.setLong(1, referencingArticleId)
     insertIntoReferenceStatement.setLong(2, referencedArticleId)
-    try {
-      insertIntoReferenceStatement.execute()
-    } catch {
-      case e: java.sql.SQLException => println(e)
-    }
+
   }
 
 }

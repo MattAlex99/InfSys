@@ -12,12 +12,11 @@ import scala.annotation.tailrec
 class CreationManager{
   val connection: Connection = DriverManager.getConnection("jdbc:h2:./demo")
   def createArticleDB(): Unit = {
-    println("Creatign DB!")
     val statement = connection.createStatement()
     val createArticleTable =
       """CREATE TABLE if not exists article(
-        |id int PRIMARY KEY,
-        |title varchar(512) NOT NULL,
+        |id long primary key,
+        |title varchar(600) NOT NULL,
         |`year` int NOT NULL,
         |n_citation int NOT NULL,
         |page_start varchar(20),
@@ -26,7 +25,7 @@ class CreationManager{
         |publisher varchar(512),
         |volume varchar(32),
         |issue varchar(32),
-        |doi varchar(128)
+        |doi varchar(200 )
         )""".stripMargin
     statement.execute(createArticleTable)
     statement.close()
@@ -38,7 +37,7 @@ class CreationManager{
     val statement = connection.createStatement()
     val createTable =
       """CREATE TABLE if not exists author(
-        |id long PRIMARY KEY,
+        |id long primary key,
         |name varchar(100) NOT NULL,
         |org varchar(300)
         )""".stripMargin
@@ -51,7 +50,7 @@ class CreationManager{
     val statement = connection.createStatement()
     val createArticleAuthorTable =
       """CREATE TABLE if not exists articleAuthor(
-        |articleId long references article,
+        |articleId long  references article ,
         |authorId long references author,
         |PRIMARY KEY (articleID,authorID)
         )""".stripMargin
@@ -62,6 +61,7 @@ class CreationManager{
   def createReferneceDB(): Unit = {
     println("Creatign DB!")
     val statement = connection.createStatement()
+    //
     val createTable =
       """CREATE TABLE if not exists reference(
         |referencingArticleId long,
@@ -89,4 +89,6 @@ class CreationManager{
 
     statement.close()
   }
+
+
 }

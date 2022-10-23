@@ -1,32 +1,57 @@
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] IncrementalCompile -----------[0m
-[0m[[0m[0mdebug[0m] [0m[0mIncrementalCompile.incrementalCompile[0m
-[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 2 products, 1 sources, 1 libraries[0m
-[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/Main.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/main/scala/Main.scala), unmodified = ...),Set(${BASE}/target/scala-2.13/classes/Main$.class, ${BASE}/target/scala-2.13/classes/Main.class),Set(),API Changes: Set())[0m
-[0m[[0m[0mdebug[0m] [0m[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial source changes:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	removed: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(${BASE}/src/main/scala/Main.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set(${BASE}/target/scala-2.13/classes/Main$.class, ${BASE}/target/scala-2.13/classes/Main.class)[0m
-[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(Main)[0m
-[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	product: Set(${BASE}/src/main/scala/Main.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mall 1 sources are invalidated[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Main[0m
-[0m[[0m[0mdebug[0m] [0m[0mRecompiling all sources: number of invalidated sources > 50.0 percent of all sources[0m
-[0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
-[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/alexander/IdeaProjects/infsys_praktikum1/target/scala-2.13/classes ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.13:1.7.2:compile for Scala 2.13.10[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 21500c9c for Scala compiler version 2.13.10[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
-[0m[[0m[0mdebug[0m] [0m[0m	/home/alexander/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
-[0m[[0m[0mdebug[0m] [0m[0m	/home/alexander/IdeaProjects/infsys_praktikum1/target/scala-2.13/classes:/home/alexander/.cache/coursier/v1/https/repo1.maven.org/maven2/com/h2database/h2/2.1.214/h2-2.1.214.jar:/home/alexander/.cache/coursier/v1/https/repo1.maven.org/maven2/io/spray/spray-json_2.13/1.3.6/spray-json_2.13-1.3.6.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 3.695476565 s[0m
-[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[debug] [zinc] IncrementalCompile -----------
+[debug] IncrementalCompile.incrementalCompile
+[debug] previous = Stamps for: 0 products, 0 sources, 0 libraries
+[debug] current source = Set(${BASE}/src/main/scala/CreationManager.scala, ${BASE}/src/main/scala/WritingManager.scala, ${BASE}/src/main/scala/Line.scala, ${BASE}/src/main/scala/TimeKeeper.scala, ${BASE}/src/main/scala/Main.scala, ${BASE}/src/main/scala/ArticleReference.scala, ${BASE}/src/main/scala/Author.scala)
+[debug] > initialChanges = InitialChanges(Changes(added = Set(${BASE}/src/main/scala/TimeKeeper.scala, ${BASE}/src/main/scala/CreationManager.scala, ${BASE}/src/main/scala/WritingManager.scala, ${BASE}/src/main/scala/Main.scala, ${BASE}/src/main/scala/Line.scala, ${BASE}/src/main/scala/ArticleReference.scala, ${BASE}/src/main/scala/Author.scala), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())
+[debug] Full compilation, no sources in previous analysis.
+[debug] all 7 sources are invalidated
+[debug] Initial set of included nodes: 
+[debug] Recompiling all sources: number of invalidated sources > 50.0 percent of all sources
+[debug] compilation cycle 1
+[info] compiling 7 Scala sources to D:\Uni\Inf-Sys\InfSys\target\scala-2.13\classes ...
+[debug] Getting org.scala-sbt:compiler-bridge_2.13:1.7.2:compile for Scala 2.13.10
+[info] Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+[debug] Creating plain compiler interface for 2.13.10.
+[debug]   > Arguments: 
+[debug] 	-d
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_dc3efe27
+[debug] 	-nowarn
+[debug] 	-bootclasspath
+[debug] 	C:\Users\Some Usage\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.10\scala-library-2.13.10.jar
+[debug] 	-classpath
+[debug] 	C:\Users\Some Usage\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\compiler-interface\1.7.2\compiler-interface-1.7.2.jar;C:\Users\Some Usage\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\util-interface\1.7.2\util-interface-1.7.2.jar;C:\Users\Some Usage\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\compiler-bridge_2.13\1.7.2\compiler-bridge_2.13-1.7.2-sources.jar;C:\Users\Some Usage\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.13.10\scala-compiler-2.13.10.jar;C:\Users\Some Usage\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.13.10\scala-reflect-2.13.10.jar;C:\Users\Some Usage\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\io\github\java-diff-utils\java-diff-utils\4.12\java-diff-utils-4.12.jar;C:\Users\Some Usage\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\jline\jline\3.21.0\jline-3.21.0.jar;C:\Users\Some Usage\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\net\java\dev\jna\jna\5.9.0\jna-5.9.0.jar
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\scala\ZincCompat.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\API.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\AbstractZincFile.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\Analyzer.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\CallbackGlobal.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\ClassName.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\Compat.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\CompilerBridge.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\ConsoleBridge.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\DelegatingReporter.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\Dependency.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\ExtractAPI.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\ExtractUsedNames.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\GlobalHelpers.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\InteractiveConsoleBridge.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\InteractiveConsoleFactoryBridge.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\InteractiveConsoleHelper.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\InteractiveConsoleResponse.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\JarUtils.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\JavaUtils.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\LocalToNonLocalClass.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\LocateClassFile.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\Log.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\Message.scala
+[debug] 	C:\Users\SOMEUS~1\AppData\Local\Temp\sbt_cc60099c\xsbt\ScaladocBridge.scala
+[debug]       
+[info]   Compilation completed in 8.464s.
+[debug] [zinc] Running cached compiler 55ec3297 for Scala compiler version 2.13.10
+[debug] [zinc] The Scala compiler is invoked with:
+[debug] 	-bootclasspath
+[debug] 	C:\Users\Some Usage\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.10\scala-library-2.13.10.jar
+[debug] 	-classpath
+[debug] 	D:\Uni\Inf-Sys\InfSys\target\scala-2.13\classes;C:\Users\Some Usage\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\h2database\h2\2.1.214\h2-2.1.214.jar;C:\Users\Some Usage\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\io\spray\spray-json_2.13\1.3.6\spray-json_2.13-1.3.6.jar;C:\Users\Some Usage\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\google\code\gson\gson\2.9.1\gson-2.9.1.jar
+[debug] Scala compilation took 10.4300746 s
+[info] done compiling
