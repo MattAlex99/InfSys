@@ -1,5 +1,8 @@
+import org.h2.tools.Server
+
 object Main {
   def main(args: Array[String]): Unit = {
+    val  server = Server.createTcpServer("-tcpPort", "9092", "-tcpAllowOthers").start();
 
     val creationManager = new CreationManager
     creationManager.createArticleDB()
@@ -16,5 +19,8 @@ object Main {
     creationManager.addReferencesConstraint()
     println("Time spent on operations (in ms): "+ (timeAfter-timeBefore))
     TimeKeeper.checkFinalTime()
+    println("before Stopping")
+    server.stop()
+    println("after stopping")
   }
 }

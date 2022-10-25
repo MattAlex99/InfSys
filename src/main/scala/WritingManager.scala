@@ -9,8 +9,7 @@ import scala.annotation.tailrec
 
 
 class WritingManager {
-  val connection: Connection = DriverManager.getConnection("jdbc:h2:./demo")
-
+  val connection: Connection = DriverManager.getConnection("jdbc:h2:tcp://localhost/D:/Uni/Inf-Sys/InfSys/db2")
   def readFileByLine(path:String):Unit={
     println("Start reading files")
     val is = new FileInputStream(path)
@@ -73,6 +72,7 @@ class WritingManager {
     insertIntoArticleStatement.setString(9,line.volume)
     insertIntoArticleStatement.setString(10,line.issue)
     insertIntoArticleStatement.setString(11,line.doi)
+    insertIntoArticleStatement.execute()
 
   }
 
@@ -82,6 +82,11 @@ class WritingManager {
     insertIntoAuthorStatement.setLong(1,author.id)
     insertIntoAuthorStatement.setString(2,author.name)
     insertIntoAuthorStatement.setString(3,author.org)
+    try {
+      insertIntoAuthorStatement.execute()
+    } catch {
+      case e: java.sql.SQLException =>
+    }
 
   }
 
@@ -102,6 +107,7 @@ class WritingManager {
   def insertIntoReference(referencingArticleId:Long, referencedArticleId:Long): Unit = {
     insertIntoReferenceStatement.setLong(1, referencingArticleId)
     insertIntoReferenceStatement.setLong(2, referencedArticleId)
+    insertIntoReferenceStatement.execute()
 
   }
 

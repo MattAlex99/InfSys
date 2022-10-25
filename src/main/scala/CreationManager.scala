@@ -7,10 +7,11 @@ import java.util.Scanner
 import com.google.gson.Gson
 import java.util.Date
 import scala.annotation.tailrec
+import org.h2.tools.Server
 
 
 class CreationManager{
-  val connection: Connection = DriverManager.getConnection("jdbc:h2:./demo")
+  val connection: Connection = DriverManager.getConnection("jdbc:h2:tcp://localhost/D:/Uni/Inf-Sys/InfSys/db2")
   def createArticleDB(): Unit = {
     val statement = connection.createStatement()
     val createArticleTable =
@@ -29,7 +30,6 @@ class CreationManager{
         )""".stripMargin
     statement.execute(createArticleTable)
     statement.close()
-    println("BD has been created")
   }
 
   def createAuthorDB(): Unit = {
@@ -56,6 +56,8 @@ class CreationManager{
         )""".stripMargin
     statement.execute(createArticleAuthorTable)
     statement.close()
+    println("Created ArticleAuthorDB!")
+
   }
 
   def createReferneceDB(): Unit = {
